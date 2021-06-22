@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">geointeligencia_ANP_App</string>
+    <string name="google_maps_key"></string>
+    <string name="facebook_app_id">1259489261091147</string>
+    <string name="bienv_tit">Bienvenido</string>
+    <string name="bienv_ins">Es un placer que nos visite, esperamos que disfrute su estadía. A continuación podrá encontrar algunas preguntas que nos ayudarán a saber cómo decidió el destino de la aventura que está por vivir.</string>
+
+    <string name="si">Sí</string>
+    <string name="no">No</string>
+
+    <string name="q1">1. Edad: </string>
+    <string name="rb1_1">Menos de 20 años.</string>
+    <string name="rb1_2">De 20 años a 40 años.</string>
+    <string name="rb1_3">De 40 a 60 años.</string>
+    <string name="rb1_4">Más de 60 años.</string>
+
+    <string name="q2">2. Sexo: </string>
+    <string name="rb2_1">Masculino</string>
+    <string name="rb2_2">Femenino</string>
+
+    <string name="q5">5. En caso de hospedarse, ¿dónde lo hace? </string>
+    <string name="rb5_1">Hotel, posada u hostal</string>
+    <string name="rb5_2">Vivienda propia</string>
+    <string name="rb5_3">Vivienda de familiar o amigo</string>
+    <string name="rb5_4">Renta de casa o departamento</string>
+    <string name="rb5_5">Ninguna, estoy de paso</string>
+
+    <string name="q6">6. ¿Cómo se enteró de la existencia del sitio? </string>
+    <string name="q6_1">Redes Sociales</string>
+    <string name="q6_2">Publicidad en TV o Radio</string>
+    <string name="q6_3">Revistas</string>
+    <string name="q6_4">Agencias de Viajes</string>
+
+    <string name="q7">7. ¿Ha tenido referencia del ANP por recomendación de alguna red social? </string>
+
+
+
+    <string-array name="filter_options">
+        <item>Fecha</item>
+        <item>Tiempo de ruta</item>
+        <item>Distancia</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

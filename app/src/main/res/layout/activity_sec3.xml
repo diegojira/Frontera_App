@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bienv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_regresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType=""
+                android:text="¡Regresa pronto!"
+                android:textAlignment="center"
+                android:textColor="#F8F8F8"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_Intro_regresa"
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:ems="10"
+                android:text="Viajero, ahora que su aventura ha terminado queremos conocer lo que piensa del ANP.
+18. Duración de la visita en horas"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/md_blue_200"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/et_q18_regresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="18. Duración de la visita en horas"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_q18_regresa_a"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb18_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="a. Menos de una hora" />
+
+                <RadioButton
+                    android:id="@+id/rb18_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="b. De una a dos horas" />
+
+                <RadioButton
+                    android:id="@+id/rb18_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="c. De dos a cuatro horas" />
+
+                <RadioButton
+                    android:id="@+id/rb18_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="d. Más de cuatro horas" />
+
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/et_q19_regresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="19. Considera que el tiempo de su vista dentro de la ANP fue (es):"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_q19_regresa_a"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb19_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="a. Suficiente" />
+
+                <RadioButton
+                    android:id="@+id/rb19_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="b. Insuficiente" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/et_q20_regresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20. ¿Qué tipo de recorrido prefiere dentro de la ANP?"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_q20_regresa_a"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb20_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="a. A pie" />
+
+                <RadioButton
+                    android:id="@+id/rb20_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="b. En bicicleta " />
+
+                <RadioButton
+                    android:id="@+id/rb20_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="c. A caballo" />
+
+                <RadioButton
+                    android:id="@+id/rb20_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="d. En cuatrimoto " />
+
+                <RadioButton
+                    android:id="@+id/rb20_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="e. Otro " />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/et_q21_regresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="21. De todos los recursos observados ¿cuál disfrutó más?"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_q21_regresa_a"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb21_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="a. Flora" />
+
+                <RadioButton
+                    android:id="@+id/rb21_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="b. Fauna " />
+
+                <RadioButton
+                    android:id="@+id/rb2_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="c. Paisaje" />
+
+                <RadioButton
+                    android:id="@+id/rb21_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="d. Cuerpos de agua" />
+
+                <RadioButton
+                    android:id="@+id/rb21_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="e. Manifestaciones culturales" />
+
+
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

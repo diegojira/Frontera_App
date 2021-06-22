@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <action android:id="@+id/action_global_trackingFragment"
+        app:destination="@+id/trackingFragment"
+        app:launchSingleTop="true" />
+
+    <fragment
+        android:id="@+id/routeFragment"
+        android:name="com.cicipn.geointeligencia_anp_app.ui.fragments.RouteFragment"
+        android:label="RouteFragment" >
+        <action
+            android:id="@+id/action_routeFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.cicipn.geointeligencia_anp_app.ui.fragments.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_routeFragment"
+            app:destination="@id/routeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.cicipn.geointeligencia_anp_app.ui.fragments.ShareFragment"
+        android:label="ShareFragment" />
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.cicipn.geointeligencia_anp_app.ui.fragments.TrackingFragment"
+        android:label="TrackingFragment" >
+        <action
+            android:id="@+id/action_trackingFragment_to_routeFragment"
+            app:destination="@id/routeFragment" />
+        <action
+            android:id="@+id/action_trackingFragment_to_pollFragment"
+            app:destination="@id/pollFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.cicipn.geointeligencia_anp_app.ui.fragments.MapFragment"
+        android:label="MapFragment" />
+    <fragment
+        android:id="@+id/pollFragment"
+        android:name="com.cicipn.geointeligencia_anp_app.ui.fragments.PollFragment"
+        android:label="PollFragment" >
+        <action
+            android:id="@+id/action_pollFragment_to_routeFragment"
+            app:destination="@id/routeFragment" />
+    </fragment>
+</navigation>

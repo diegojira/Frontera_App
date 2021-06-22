@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bienv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/et_bienv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType=""
+                android:text="@string/bienv_tit"
+                android:textAlignment="center"
+                android:textColor="#F8F8F8"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_ins"
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:ems="10"
+                android:text="@string/bienv_ins"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/md_blue_200"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/et_q1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q1"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_q1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/rb1_1" />
+
+                <RadioButton
+                    android:id="@+id/rb1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/rb1_2" />
+
+                <RadioButton
+                    android:id="@+id/rb1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/rb1_3" />
+
+                <RadioButton
+                    android:id="@+id/rb1_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/rb1_4" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/q2" />
+
+            <RadioGroup
+                android:id="@+id/rg_q2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb2_1" />
+
+                <RadioButton
+                    android:id="@+id/rb2_2"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/rb2_2" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/editTextTextLugarProcedencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="3. Lugar de procedencia: " />
+
+            <Spinner
+                android:id="@+id/q3_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" /><![CDATA[
+
+            android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                ]]>
+
+            <TextView
+                android:id="@+id/txtPreg4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="4. ¿Qué lo motivó a venir a el ANP?  " />
+
+            <CheckBox android:id="@+id/checkPreg4_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a. El paisaje"
+                    android:onClick="onCheckboxClicked"/>
+
+                <CheckBox android:id="@+id/checkPreg4_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b. El costo accesible"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkPreg4_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c. La cercanía"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkPreg4_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d. Las actividades al aire libre y contacto con la naturaleza "
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkPreg4_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="e. Ampliar el conocimiento sobre la naturaleza"
+                    android:onClick="onCheckboxClicked"/>
+
+                <CheckBox android:id="@+id/checkPreg4_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="f. Practicar deportes extremos"
+                    android:onClick="onCheckboxClicked"/>
+
+                <CheckBox android:id="@+id/checkPreg4_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="g. Interés por la cultura local"
+                    android:onClick="onCheckboxClicked"/>
+
+            <TextView
+                android:id="@+id/q5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="@string/q5" />
+
+            <RadioGroup
+                android:id="@+id/rg_q5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rb5_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb5_1" />
+
+                <RadioButton
+                    android:id="@+id/rb5_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb5_2" />
+
+                <RadioButton
+                    android:id="@+id/rb5_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb5_3" />
+
+                <RadioButton
+                    android:id="@+id/rb5_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb5_4" />
+
+                <RadioButton
+                    android:id="@+id/rb5_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb5_5" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/q6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/q6" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_q6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip6_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q6_1" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip6_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q6_2" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip6_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q6_3" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip6_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q6_4" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:id="@+id/q7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:text="@string/q7" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

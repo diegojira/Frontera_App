@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp">
+
+    <TextView
+        android:id="@+id/textViewSecciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Secciones"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSeccionBienvenido"
+        android:layout_width="252dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="444dp"
+        android:text="¡Bienvenido!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSecciones"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <Button
+        android:id="@+id/btnSeccionServicios"
+        android:layout_width="252dp"
+        android:layout_height="49dp"
+        android:text="Servicios en el ANP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeccionBienvenido"
+        app:layout_constraintVertical_bias="0.287" />
+
+    <Button
+        android:id="@+id/btnSeccionRegresa"
+        android:layout_width="252dp"
+        android:layout_height="49dp"
+        android:text="¡Regresa Pronto!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeccionServicios"
+        app:layout_constraintVertical_bias="0.484" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
