@@ -31,8 +31,42 @@
     <string name="q6_3">Revistas</string>
     <string name="q6_4">Agencias de Viajes</string>
 
-    <string name="q7">7. ¿Ha tenido referencia del ANP por recomendación de alguna red social? </string>
+    <string name="q7">7. ¿Cuántas veces ha visitado el ANP? </string>
+    <string name="rb7_1">0</string>
+    <string name="rb7_2">1 vez</string>
+    <string name="rb7_3">2 veces</string>
+    <string name="rb7_4">3 o más veces</string>
 
+    <string name="q8">8. ¿Cuántas personas le acompañan? </string>
+    <string name="rb8_1">0</string>
+    <string name="rb8_2">De 1 a 3 personas</string>
+    <string name="rb8_3">De 4 a 6 personas</string>
+    <string name="rb8_4">De 7 a 9 personas</string>
+    <string name="rb8_5">10 o más personas</string>
+
+    <string name="q9">9. Medio de transporte en el que llegó al ANP: </string>
+    <string name="rb9_1">Automóvil particular</string>
+    <string name="rb9_2">Transporte público</string>
+    <string name="rb9_3">Vehículo de un tour</string>
+    <string name="rb9_4">Bicicleta</string>
+    <string name="rb9_5">Otro</string>
+
+    <string name="q10">10. Duración de la visita: </string>
+    <string name="rb10_1">Menos de una 1 hora</string>
+    <string name="rb10_2">De 1 a 2 horas</string>
+    <string name="rb10_3">De 2 a 4 horas</string>
+    <string name="rb10_4">Más de 4 horas</string>
+
+    <string name="q11">11. Aproximadamente, ¿cuánto dinero gastó usted en el ANP? </string>
+    <string name="rb11_1">Entre $100 y $500 pesos</string>
+    <string name="rb11_2">Entre $501 y $1000 pesos</string>
+    <string name="rb11_3">Entre $1001 y $2000 pesos</string>
+    <string name="rb11_4">Más de $2000 pesos</string>
+
+    <string name="q12">12. ¿Qué tan complicado es llegar al ANP? </string>
+    <string name="rb12_1">Poco </string>
+    <string name="rb12_2">Regular</string>
+    <string name="rb12_3">Muy complicado</string>
 
 
     <string-array name="filter_options">
@@ -42,5 +76,32 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="uno">1</string>
+    <string name="dos">2</string>
+    <string name="tres">3</string>
+    <string name="cuatro">4</string>
+    <string name="cinco">5</string>
+    <string name="q13">13.¿Qué tipo de servicios pudo identificar dentro de la ANP? (PC)</string>
+    <string name="cb13_1">Tienda general</string>
+    <string name="cb13_2">Venta de artesanías </string>
+    <string name="cb13_3">Restaurantes, fondos o puestos de comida</string>
+    <string name="cb13_4">Centro de visitantes y/o información turística</string>
+    <string name="cb13_5">Guía de turistas</string>
+    <string name="cb13_6">Renta de equipo y accesorios</string>
+    <string name="cb13_7">Vigilancia</string>
+    <string name="cb13_8">Sanitarios</string>
+    <string name="cb13_9">Botes de basura</string>
+    <string name="q14">14. Del ANP, ¿cómo califica los aspectos siguientes?</string>
+    <string name="rb_sec_14_1">Accesibilidad</string>
+    <string name="rb_sec_14_2">Instalaciones</string>
+    <string name="rb_sec_14_3">Señalización</string>
+    <string name="rb_sec_14_4">Información disponible sobre el ANP en el sitio</string>
+    <string name="rb_sec_14_5">Costo de acceso</string>
+    <string name="rb_sec_14_6">Horario de funcionamiento</string>
+    <string name="rb_sec_14_7">Sanitarios</string>
+    <string name="rb_sec_14_8">Reglamento</string>
+    <string name="rb_14_1">malo</string>
+    <string name="rb_14_2">regular</string>
+    <string name="rb_14_3">bueno</string>
 
 </resources>

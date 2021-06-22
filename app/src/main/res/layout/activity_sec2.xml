@@ -23,144 +23,244 @@
                 android:id="@+id/et_servicios"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:ems="10"
                 android:inputType=""
                 android:text="Servicios en el ANP"
                 android:textAlignment="center"
-                android:textColor="#F8F8F8"
+                android:textColor="@color/letra"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/et_Intro_servicios"
                 android:layout_width="match_parent"
-                android:layout_height="132dp"
+                android:layout_height="89dp"
                 android:ems="10"
-                android:text="¡Hola de nuevo! Ahora que ha podido conocer más sobre este bello lugar, deseamos conocer su opinión sobre los servicios que ofrecemos a nuestros visitantes."
+                android:text="Deseamos conocer su opinión sobre los servicios que ofrecemos a nuestros visitantes."
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/md_blue_200"
+                android:textColor="@color/letra"
                 android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/q11"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="@string/q11"
+                android:textSize="17sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_q11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rb11_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb11_1"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb11_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb11_2"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb11_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb11_3"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb11_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb11_4"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"/>
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/q12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q12"
+                android:textSize="17sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_q12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rb12_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb12_1"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb12_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb12_2"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb12_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb11_3"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"/>
+
+
+
+            </RadioGroup>
 
             <TextView
                 android:id="@+id/et_q13_servicios"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="13.Del siguiente listado, ¿Qué tipo de servicios pudo identificar dentro de la ANP? (PC)"
-                android:textSize="18sp" />
+                android:layout_height="54dp"
+                android:text="@string/q13"
+                android:textSize="17sp" />
 
-            <CheckBox android:id="@+id/checkq13_a"
-                android:layout_width="wrap_content"
+            <CheckBox
+                android:id="@+id/checkq13_a"
+                android:layout_width="349dp"
                 android:layout_height="wrap_content"
-                android:text="a. Tiendas"
-                android:onClick="onCheckboxClicked"/>
+                android:onClick="onCheckboxClicked"
+                android:text="@string/cb13_1"
+                android:textColor="@color/letra"
+                android:textSize="14sp" />
 
             <CheckBox android:id="@+id/checkq13_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="b. Restaurantes, fondas, puestos de comida. "
-                android:onClick="onCheckboxClicked"/>
+                android:text="@string/cb13_2"
+                android:onClick="onCheckboxClicked"
+                android:textColor="@color/letra"
+                android:textSize="14sp"/>
             <CheckBox android:id="@+id/checkq13_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="c. Centro de visitantes y/o información turística"
-                android:onClick="onCheckboxClicked"/>
+                android:text="@string/cb13_3"
+                android:onClick="onCheckboxClicked"
+                android:textColor="@color/letra"
+                android:textSize="14sp"/>
             <CheckBox android:id="@+id/checkq13_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="d. Sanitarios "
-                android:onClick="onCheckboxClicked"/>
+                android:text="@string/cb13_4"
+                android:onClick="onCheckboxClicked"
+                android:textColor="@color/letra"
+                android:textSize="14sp"/>
             <CheckBox android:id="@+id/checkq13_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="e. Hoteles"
-                android:onClick="onCheckboxClicked"/>
+                android:text="@string/cb13_5"
+                android:onClick="onCheckboxClicked"
+                android:textColor="@color/letra"
+                android:textSize="14sp"/>
 
             <CheckBox android:id="@+id/checkq13_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="f. Botes de basura"
-                android:onClick="onCheckboxClicked"/>
+                android:text="@string/cb13_6"
+                android:onClick="onCheckboxClicked"
+                android:textColor="@color/letra"
+                android:textSize="14sp"/>
 
             <CheckBox android:id="@+id/checkq13_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="g. Guia de turstas"
-                android:onClick="onCheckboxClicked"/>
+                android:text="@string/cb13_7"
+                android:onClick="onCheckboxClicked"
+                android:textColor="@color/letra"
+                android:textSize="14sp"/>
 
             <CheckBox android:id="@+id/checkq13_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="h. Renta de equipo especializado"
+                android:text="@string/cb13_8"
+                android:textColor="@color/letra"
+                android:textSize="14sp"
                 android:onClick="onCheckboxClicked"/>
 
             <CheckBox android:id="@+id/checkq13_i"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="i.Vigilancia"
+                android:text="@string/cb13_9"
+                android:textColor="@color/letra"
+                android:textSize="14sp"
                 android:onClick="onCheckboxClicked"/>
 
-            <CheckBox android:id="@+id/checkq13_j"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="j. Servicios de limpieza"
-                android:onClick="onCheckboxClicked"/>
+
 
 
             <TextView
                 android:id="@+id/et_q14_servicios"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="14. ¿Cómo califica los aspectos siguientes?"
+                android:text="@string/q14"
+                android:textColor="@color/letra"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/et_q14_servicios_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="a. Precio"
+                android:text="@string/rb_sec_14_1"
+                android:textColor="@color/letra"
                 android:textSize="14sp" />
 
             <RadioGroup
                 android:id="@+id/rg_q14_servicios_a"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/letra"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb14_a_1"
+                    android:id="@+id/rb14_1_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_1" />
 
                 <RadioButton
-                    android:id="@+id/rb14_a_2"
+                    android:id="@+id/rb14_1_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_2" />
 
                 <RadioButton
-                    android:id="@+id/rb14_a_3"
+                    android:id="@+id/rb14_1_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="3" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_3" />
 
-                <RadioButton
-                    android:id="@+id/rb14_a_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
 
-                <RadioButton
-                    android:id="@+id/rb14_a_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="5" />
 
             </RadioGroup>
 
@@ -169,49 +269,44 @@
                 android:id="@+id/et_q14_servicios_b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="b. Sabor"
-                android:textSize="14sp" />
+                android:text="@string/rb_sec_14_2"
+                android:textColor="@color/letra"
+                android:textSize="14sp"/>
 
             <RadioGroup
                 android:id="@+id/rg_q14_servicios_b"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
 
                 <RadioButton
-                    android:id="@+id/rb14_b_1"
+                    android:id="@+id/rb14_2_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_1" />
 
                 <RadioButton
-                    android:id="@+id/rb14_b_2"
+                    android:id="@+id/rb14_2_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_2" />
 
                 <RadioButton
-                    android:id="@+id/rb14_b_3"
+                    android:id="@+id/rb14_2_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="3" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_3" />
 
-                <RadioButton
-                    android:id="@+id/rb14_b_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
-
-                <RadioButton
-                    android:id="@+id/rb14_b_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
 
             </RadioGroup>
 
@@ -222,49 +317,42 @@
                 android:id="@+id/et_q14_servicios_c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="c. Calidad del producto"
+                android:text="@string/rb_sec_14_3"
                 android:textSize="14sp" />
 
             <RadioGroup
                 android:id="@+id/rg_q14_servicios_c"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
 
                 <RadioButton
-                    android:id="@+id/rb14_c_1"
+                    android:id="@+id/rb14_3_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_1" />
 
                 <RadioButton
-                    android:id="@+id/rb14_c_2"
+                    android:id="@+id/rb14_3_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_2" />
 
                 <RadioButton
-                    android:id="@+id/rb14_c_3"
+                    android:id="@+id/rb14_3_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="3" />
-
-                <RadioButton
-                    android:id="@+id/rb14_c_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
-
-                <RadioButton
-                    android:id="@+id/rb14_c_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_3" />
 
             </RadioGroup>
 
@@ -272,7 +360,7 @@
                 android:id="@+id/et_q14_servicios_d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="d. Facilidad para el consumo"
+                android:text="@string/rb_sec_14_4"
                 android:textSize="14sp" />
 
             <RadioGroup
@@ -282,39 +370,31 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb14_d_1"
+                    android:id="@+id/rb14_4_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_1" />
 
                 <RadioButton
-                    android:id="@+id/rb14_d_2"
+                    android:id="@+id/rb14_4_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_2" />
 
                 <RadioButton
-                    android:id="@+id/rb14_d_3"
+                    android:id="@+id/rb14_4_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="3" />
-
-                <RadioButton
-                    android:id="@+id/rb14_d_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
-
-                <RadioButton
-                    android:id="@+id/rb14_d_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_3" />
 
             </RadioGroup>
 
@@ -322,8 +402,9 @@
                 android:id="@+id/et_q14_servicios_e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="d. Medidas de higiene"
-                android:textSize="14sp" />
+                android:text="@string/rb_sec_14_5"
+                android:textColor="@color/letra"
+                android:textSize="14sp"/>
 
             <RadioGroup
                 android:id="@+id/rg_q14_servicios_e"
@@ -332,39 +413,31 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb14_e_1"
+                    android:id="@+id/rb14_5_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_1" />
 
                 <RadioButton
-                    android:id="@+id/rb14_e_2"
+                    android:id="@+id/rb14_5_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_2" />
 
                 <RadioButton
-                    android:id="@+id/rb14_e_3"
+                    android:id="@+id/rb14_5_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="3" />
-
-                <RadioButton
-                    android:id="@+id/rb14_e_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
-
-                <RadioButton
-                    android:id="@+id/rb14_e_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_3" />
 
             </RadioGroup>
 
@@ -373,7 +446,7 @@
                 android:id="@+id/et_q14_servicios_f"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="e. Experimentación con productos y recetas locales"
+                android:text="@string/rb_sec_14_6"
                 android:textSize="14sp" />
 
             <RadioGroup
@@ -383,39 +456,31 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb14_f_1"
+                    android:id="@+id/rb14_6_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_1" />
 
                 <RadioButton
-                    android:id="@+id/rb14_f_2"
+                    android:id="@+id/rb14_6_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_2" />
 
                 <RadioButton
-                    android:id="@+id/rb14_f_3"
+                    android:id="@+id/rb14_6_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="3" />
-
-                <RadioButton
-                    android:id="@+id/rb14_f_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
-
-                <RadioButton
-                    android:id="@+id/rb14_f_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="4" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_3" />
 
             </RadioGroup>
 
@@ -423,7 +488,7 @@
                 android:id="@+id/et_q14_servicios_g"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="g. Recomendaciones por internet y/o redes sociales"
+                android:text="@string/rb_sec_14_7"
                 android:textSize="14sp" />
 
             <RadioGroup
@@ -433,40 +498,72 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb14_g_1"
+                    android:id="@+id/rb14_7_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_1" />
 
                 <RadioButton
-                    android:id="@+id/rb14_g_2"
+                    android:id="@+id/rb14_7_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_2" />
 
                 <RadioButton
-                    android:id="@+id/rb14_g_3"
+                    android:id="@+id/rb14_7_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="3" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_3" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/et_q14_servicios_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rb_sec_14_8"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_q14_servicios_h"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb14_g_4"
+                    android:id="@+id/rb14_8_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="4" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_1" />
 
                 <RadioButton
-                    android:id="@+id/rb14_g_5"
+                    android:id="@+id/rb14_8_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="4" />
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_2" />
 
+                <RadioButton
+                    android:id="@+id/rb14_8_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp"
+                    android:text="@string/rb_14_3" />
             </RadioGroup>
 
         </LinearLayout>
