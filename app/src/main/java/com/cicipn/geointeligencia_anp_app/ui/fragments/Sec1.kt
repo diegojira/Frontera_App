@@ -23,7 +23,7 @@ class Sec1 : AppCompatActivity() {
         val q3_opc = arrayOf("Foreigner","Aguascalientes","Baja California","Baja California Sur","Campeche","Coahuila","CDMX","Colima","Chiapas","Chihuahua",
                 "Durango","Estado de México","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacán","Morelos","Nayarit","Nuevo León","Oaxaca",
                 "Puebla","Querétaro","Quintana Roo","San Luís Potosí","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatán",
-                "Zacatecas")
+                "Zacatecas","Cambio")
 
         //Pregunta 3
         q3_lugar.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,q3_opc)
