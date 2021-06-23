@@ -41,7 +41,7 @@ class RouteFragment: Fragment(R.layout.fragment_route), EasyPermissions.Permissi
             findNavController().navigate(R.id.action_routeFragment_to_trackingFragment)
         }
         // Titulo del fragmento
-        requireActivity().tvToolbarTitle.text = "Bienvenido"
+        requireActivity().tvToolbarTitle.text = "Tus rutas"
     }
 
     private fun setupRecyclerView() = rvRuns.apply {
