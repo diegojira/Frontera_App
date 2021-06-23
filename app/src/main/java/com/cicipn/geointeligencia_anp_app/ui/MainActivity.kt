@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 .addOnDestinationChangedListener{ _, destination, _->
                     when(destination.id) {
                         // Settings to set the visibility of the navigation bar, in other fragments that doesn't belong in this list the navigation will disappear
-                        R.id.shareFragment, R.id.routeFragment, R.id.mapFragment ->
+                        R.id.shareFragment, R.id.routeFragment, R.id.mapFragment, R.id.pollFragment ->
                             bottomNavigationView.visibility = View.VISIBLE
                         else -> bottomNavigationView.visibility = View.GONE
                     }
