@@ -13,7 +13,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,17 +33,6 @@
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/et_ins"
-                android:layout_width="match_parent"
-                android:layout_height="132dp"
-                android:ems="10"
-                android:text="@string/bienv_ins"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/et_q1"
@@ -115,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb2_1"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb2_2"
@@ -124,7 +114,7 @@
                     android:layout_weight="1"
                     android:text="@string/rb2_2"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -159,7 +149,7 @@
                 android:onClick="onCheckboxClicked"
                 android:text="a. El paisaje"
                 android:textColor="@color/letra"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <CheckBox
                 android:id="@+id/checkPreg4_b"
@@ -168,7 +158,7 @@
                 android:onClick="onCheckboxClicked"
                 android:text="b. El costo accesible"
                 android:textColor="@color/letra"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <CheckBox
                 android:id="@+id/checkPreg4_c"
@@ -177,7 +167,7 @@
                 android:onClick="onCheckboxClicked"
                 android:text="c. La cercanía"
                 android:textColor="@color/letra"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <CheckBox
                 android:id="@+id/checkPreg4_d"
@@ -186,7 +176,7 @@
                 android:onClick="onCheckboxClicked"
                 android:text="d. Las actividades al aire libre y contacto con la naturaleza "
                 android:textColor="@color/letra"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <CheckBox
                 android:id="@+id/checkPreg4_e"
@@ -195,7 +185,7 @@
                 android:onClick="onCheckboxClicked"
                 android:text="e. Ampliar el conocimiento sobre la naturaleza"
                 android:textColor="@color/letra"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <CheckBox
                 android:id="@+id/checkPreg4_f"
@@ -204,7 +194,7 @@
                 android:onClick="onCheckboxClicked"
                 android:text="f. Practicar deportes extremos"
                 android:textColor="@color/letra"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <CheckBox
                 android:id="@+id/checkPreg4_g"
@@ -213,15 +203,14 @@
                 android:onClick="onCheckboxClicked"
                 android:text="g. Interés por la cultura local"
                 android:textColor="@color/letra"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/q5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:text="@string/q5"
-                />
+                android:text="@string/q5" />
 
             <RadioGroup
                 android:id="@+id/rg_q5"
@@ -234,7 +223,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb5_1"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb5_2"
@@ -242,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb5_2"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb5_3"
@@ -250,7 +239,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb5_3"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb5_4"
@@ -258,7 +247,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb5_4"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb5_5"
@@ -266,7 +255,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb5_5"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -277,37 +266,42 @@
                 android:inputType="textPersonName"
                 android:text="@string/q6" />
 
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/cg_q6"
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:singleSelection="true">
+                android:layout_height="match_parent">
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip6_1"
-                    android:layout_width="wrap_content"
+                <RadioButton
+                    android:id="@+id/rb6_1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/q6_1" />
+                    android:text="@string/q6_1"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp" />
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip6_2"
-                    android:layout_width="wrap_content"
+                <RadioButton
+                    android:id="@+id/rb6_2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/q6_2" />
+                    android:text="@string/q6_2"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp" />/>
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip6_3"
-                    android:layout_width="wrap_content"
+                <RadioButton
+                    android:id="@+id/rb6_3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/q6_3" />
+                    android:text="@string/q6_3"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp" />/>
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip6_4"
-                    android:layout_width="wrap_content"
+                <RadioButton
+                    android:id="@+id/rb6_4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/q6_4" />
-
-            </com.google.android.material.chip.ChipGroup>
+                    android:text="@string/q6_4"
+                    android:textColor="@color/letra"
+                    android:textSize="14sp" />/>
+            </RadioGroup>
 
             <TextView
                 android:id="@+id/q7"
@@ -327,7 +321,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb7_1"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb7_b"
@@ -335,7 +329,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb7_2"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb7_3"
@@ -343,7 +337,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb7_3"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb7_4"
@@ -351,7 +345,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb7_4"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -373,7 +367,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb8_1"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb8_b"
@@ -381,7 +375,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb8_2"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb8_3"
@@ -389,7 +383,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb8_3"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb8_4"
@@ -397,16 +391,18 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb8_4"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
+
                 <RadioButton
                     android:id="@+id/rb8_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/rb8_5"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
             </RadioGroup>
+
             <TextView
                 android:id="@+id/q9"
                 android:layout_width="match_parent"
@@ -425,7 +421,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb9_1"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb9_b"
@@ -433,7 +429,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb9_2"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb9_3"
@@ -441,7 +437,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb9_3"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb9_4"
@@ -449,14 +445,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb9_4"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
+
                 <RadioButton
                     android:id="@+id/rb9_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/rb9_5"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -478,7 +475,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb10_1"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb10_2"
@@ -486,7 +483,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb10_2"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb10_3"
@@ -494,7 +491,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb10_3"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rb10_4"
@@ -502,12 +499,22 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rb10_4"
                     android:textColor="@color/letra"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
 
             </RadioGroup>
 
+            <Button
+                android:id="@+id/btn_finSec1"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/fin_Sec1"
+                android:textStyle="bold" />
+
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
