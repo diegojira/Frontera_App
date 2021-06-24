@@ -34,6 +34,16 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
+            <EditText
+                android:id="@+id/et_prueba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Prueba"
+                android:inputType="textPersonName"
+                android:text="Prueba"
+                android:textColor="@color/letra" />
+
             <TextView
                 android:id="@+id/et_q1"
                 android:layout_width="match_parent"

@@ -5,12 +5,16 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import android.widget.Spinner
 import com.cicipn.geointeligencia_anp_app.R
+import com.cicipn.geointeligencia_anp_app.db.DataDBHelper
+import com.cicipn.geointeligencia_anp_app.db.Table
 
 class Sec1 : AppCompatActivity() {
 
     lateinit var q3_lugar : Spinner //Spinner para los lugares de procedencia
+    val et_prueba =findViewById<EditText>(R.id.et_prueba)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,4 +35,6 @@ class Sec1 : AppCompatActivity() {
         //q3_lugar.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
         //}
     }
+
+    //Implementar función para imprimir un dato en el edit text de prueba
 }

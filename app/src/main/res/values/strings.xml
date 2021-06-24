@@ -104,4 +104,8 @@
     <string name="rb_14_2">regular</string>
     <string name="rb_14_3">bueno</string>
 
+    <string name="fin_Sec1">Terminar Sección 1</string>
+    <string name="fin_Sec2">Terminar Sección 2</string>
+    <string name="fin_Sec3">Terminar Sección 3</string>
+
 </resources>

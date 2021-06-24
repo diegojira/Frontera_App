@@ -35,7 +35,7 @@ class ShareFragment: Fragment(R.layout.fragment_share){
         super.onViewCreated(view, savedInstanceState)
         subscribeToObservers()
 
-        // Fragment tittle
+        // Fragment title
         requireActivity().tvToolbarTitle.text = "Comparte ${sharedPref.getString(KEY_NAME, "en redes")}"
 
         btnShareFacebook.setOnClickListener{
