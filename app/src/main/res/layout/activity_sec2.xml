@@ -32,16 +32,11 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/et_Intro_servicios"
+            <Button
+                android:id="@+id/button2"
                 android:layout_width="match_parent"
-                android:layout_height="89dp"
-                android:ems="10"
-                android:text="Deseamos conocer su opinión sobre los servicios que ofrecemos a nuestros visitantes."
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/letra"
-                android:textSize="18sp" />
+                android:layout_height="wrap_content"
+                android:text="Button" />
 
             <TextView
                 android:id="@+id/q11"
