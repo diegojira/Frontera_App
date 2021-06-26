@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSeccionBienvenido"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintVertical_bias="0.179" />
 
     <Button
         android:id="@+id/btnSeccionRegresa"
@@ -53,7 +53,18 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSeccionServicios"
-        app:layout_constraintVertical_bias="0.484" />
+        app:layout_constraintVertical_bias="0.294" />
+
+    <Button
+        android:id="@+id/btnEnviarEnc"
+        android:layout_width="196dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:text="@string/enviar_encuesta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeccionRegresa" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

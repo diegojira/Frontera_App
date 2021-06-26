@@ -11,9 +11,9 @@ class Table {
         companion object{
             val _ID = "id"
             val TABLE_NAME = "RESPUESTAS" //Nombre de la tabla
-            val COLUMN_Q1 = "Q1_EDAD"
-            val COLUMN_Q2 = "Q2_SEXO"
-            val COLUMN_Q3 = "Q3_PROCEDENCIA"
+            val COLUMN_Q1 = "Q1EDAD"
+            val COLUMN_Q2 = "Q2SEXO"
+            val COLUMN_Q3 = "Q3PROCEDENCIA"
             val COLUMN_Q4 = "Q4"
             val COLUMN_Q5 = "Q5"
             val COLUMN_Q6 = "Q6"

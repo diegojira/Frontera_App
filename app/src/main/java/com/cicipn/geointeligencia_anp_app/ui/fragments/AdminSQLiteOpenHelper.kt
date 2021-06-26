@@ -13,18 +13,18 @@ class AdminSQLiteOpenHelper(context: Context, name: String, factory: CursorFacto
 
     //Método que crea la tabla y sus columnas
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("CREATE TABLE "+Table.Respuestas_Encuesta.TABLE_NAME+" ("+Table.Respuestas_Encuesta._ID+
+        db.execSQL("CREATE TABLE "+"ID"+"("+Table.Respuestas_Encuesta._ID+
                 " TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q1+" TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q2+" TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q3+" TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q4+" TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q5+" TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q6+" TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q7+" TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q8+" TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q9+" TEXT," +
-                Table.Respuestas_Encuesta.COLUMN_Q10+" TEXT)" )
+                "Q1"+" TEXT," +
+                "Q2"+" TEXT," +
+                "Q3"+" TEXT," +
+                "Q4"+" TEXT," +
+                "Q5"+" TEXT," +
+                "Q6"+" TEXT," +
+                "Q7"+" TEXT," +
+                "Q8"+" TEXT," +
+                "Q9"+" TEXT," +
+                "Q10"+" TEXT)" )
     }
 
 

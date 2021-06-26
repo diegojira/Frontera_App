@@ -54,4 +54,20 @@
         <item name="android:textColor">@color/colorAccent</item>
     </style>
 
+    <style name="CustomChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipSurfaceColor">@color/fondoEncuesta</item>
+        <item name="chipStrokeColor">@color/azul</item>
+        <item name="android:textColor">@color/letra</item>
+        <item name="chipStrokeWidth">2dp</item>
+        <item name="android:checkable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="rBStyle" parent="@style/Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/letra</item>
+    </style>
+
 </resources>

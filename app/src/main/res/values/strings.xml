@@ -3,7 +3,7 @@
     <string name="google_maps_key"></string>
     <string name="facebook_app_id">1259489261091147</string>
     <string name="bienv_tit">Bienvenido</string>
-    <string name="bienv_ins">Es un placer que nos visite, esperamos que disfrute su estadía. A continuación podrá encontrar algunas preguntas que nos ayudarán a saber cómo decidió el destino de la aventura que está por vivir.</string>
+    <string name="bienv_ins"></string>
 
     <string name="si">Sí</string>
     <string name="no">No</string>
@@ -69,6 +69,7 @@
     <string name="rb12_3">Muy complicado</string>
 
 
+
     <string-array name="filter_options">
         <item>Fecha</item>
         <item>Tiempo de ruta</item>
@@ -81,6 +82,12 @@
     <string name="tres">3</string>
     <string name="cuatro">4</string>
     <string name="cinco">5</string>
+    <string name="seis">6</string>
+    <string name="siete">7</string>
+    <string name="ocho">8</string>
+    <string name="nueve">9</string>
+    <string name="diez">10</string>
+
     <string name="q13">13.¿Qué tipo de servicios pudo identificar dentro de la ANP? (PC)</string>
     <string name="cb13_1">Tienda general</string>
     <string name="cb13_2">Venta de artesanías </string>
@@ -103,9 +110,15 @@
     <string name="rb_14_1">malo</string>
     <string name="rb_14_2">regular</string>
     <string name="rb_14_3">bueno</string>
-
-    <string name="fin_Sec1">Terminar Sección 1</string>
-    <string name="fin_Sec2">Terminar Sección 2</string>
-    <string name="fin_Sec3">Terminar Sección 3</string>
+    <string name="q3">3. Lugar de procedencia:</string>
+    <string name="q4">4. ¿Qué lo motivó a venir a el ANP? (Uno o varios).</string>
+    <string name="cb_4_1">a. El paisaje</string>
+    <string name="cb_4_2">b. El costo accesible</string>
+    <string name="cb_4_3">c. La cercanía</string>
+    <string name="cb_4_4">d. Las actividades al aire libre y contacto con la naturaleza</string>
+    <string name="cb_4_5">e. Ampliar el conocimiento sobre la naturaleza</string>
+    <string name="cb_4_6">f. Practicar deportes extremos</string>
+    <string name="cb_4_7">g. Interés por la cultura local</string>
+    <string name="enviar_encuesta">Enviar Encuesta</string>
 
 </resources>
