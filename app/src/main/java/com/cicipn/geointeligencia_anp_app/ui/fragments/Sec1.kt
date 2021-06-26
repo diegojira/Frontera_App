@@ -105,7 +105,7 @@ class Sec1 : AppCompatActivity() {
                 put(Table.Respuestas_Encuesta.COLUMN_Q10,"Respuesta 10")
 
             }*/
-            bd.insert(Table.Respuestas_Encuesta.TABLE_NAME,null,values)
+            bd.insert("RESPUESTAS",null,values)
             bd.close()
             Toast.makeText(baseContext, mensaje, Toast.LENGTH_SHORT).show();
         }

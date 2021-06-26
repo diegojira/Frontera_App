@@ -13,7 +13,7 @@ class AdminSQLiteOpenHelper(context: Context, name: String, factory: CursorFacto
 
     //Método que crea la tabla y sus columnas
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("CREATE TABLE "+"ID"+"("+Table.Respuestas_Encuesta._ID+
+        db.execSQL("CREATE TABLE "+"RESPUESTAS"+"("+"ID"+
                 " TEXT," +
                 "Q1"+" TEXT," +
                 "Q2"+" TEXT," +
