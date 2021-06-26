@@ -11,6 +11,7 @@ import android.widget.*
 import com.cicipn.geointeligencia_anp_app.R
 import com.cicipn.geointeligencia_anp_app.other.Constants
 import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_NAME
+import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_SEND1
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,7 +29,7 @@ class Sec1 : AppCompatActivity() {
     lateinit var enviarSec1 : Button // Boton que extrae respuestas
     lateinit var idsRG : Array<Int> // Arreglo donde se guardaran los ids e los radiogroups
     lateinit var idsCG : Array<Int>
-    var enviado = Global.enviado
+    //var enviado = Global.enviado
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_sec1)
@@ -51,6 +52,7 @@ class Sec1 : AppCompatActivity() {
         enviarSec1 = findViewById(R.id.enviarSec1) as Button // Declaracion Button enviarSec1
 
         enviarSec1.setOnClickListener {
+            val enviado = sharedPref.getBoolean(KEY_SEND1,false)
             var mensaje = ""
             val admin = AdminSQLiteOpenHelper(this,"Encuesta",null,1)
             val bd = admin.writableDatabase
@@ -58,7 +60,7 @@ class Sec1 : AppCompatActivity() {
             values.put("ID",sharedPref.getString(KEY_NAME, "."))
             // Obtengo respuesta de todos los rg
             try {
-                if (enviado==0) {
+                if (!enviado) {
                     for (i in idsRG) {
                         var respuesta = respuestaRadioButton(i) as Array<CharSequence>
                         values.put("Q"+respuesta.get(0),respuesta.get(1).toString())
@@ -74,8 +76,12 @@ class Sec1 : AppCompatActivity() {
                         mensaje += "\nPregunta: " + respuesta.get(0) + " respuestas seleccionadas: " + respuesta.get(
                                 1)
                     }
-                    enviado = 1
-                    Global.setGlobal(enviado)
+                    //enviado = true
+                    sharedPref.edit()
+                            .putBoolean(KEY_SEND1,true)
+                            .apply()
+
+                    //Global.setGlobal(enviado)
                 }
                 else
                     mensaje = "¡Ya has enviado tus respuestas! Gracias :)"

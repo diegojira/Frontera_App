@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.cicipn.geointeligencia_anp_app.R
 import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_FIRST_TIME_TOGGLE
 import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_NAME
+import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_SEND1
 import com.cicipn.geointeligencia_anp_app.ui.viewmodels.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -55,9 +56,11 @@ class WelcomeFragment: Fragment(R.layout.fragment_welcome){
         if(nickname.isEmpty()) {
             return false
         }
+
         sharedPref.edit()
                 .putString(KEY_NAME, nickname)
                 .putBoolean(KEY_FIRST_TIME_TOGGLE, false)
+                .putBoolean(KEY_SEND1, false)
                 .apply()
         val toolBarText = "Bienvenido $nickname"
         requireActivity().tvToolbarTitle.text = toolBarText
