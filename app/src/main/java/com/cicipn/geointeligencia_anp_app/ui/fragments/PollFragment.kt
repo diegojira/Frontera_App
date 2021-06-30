@@ -99,10 +99,11 @@ class PollFragment: Fragment(R.layout.fragment_poll){
                     val fileLocation = File(activity?.filesDir,"encuesta_geointeligencia.csv")
                     val path: Uri = FileProvider.getUriForFile(requireContext(),"com.example.geointeligencia_ANP_App.FileProvider",fileLocation)
                     val sendIntent = Intent(Intent.ACTION_SEND)
+                    sendIntent.data = Uri.parse("mailto:")
                     sendIntent.setType("text/csv")
                     //Falta agregar el destinatario.
-                    sendIntent.putExtra(Intent.EXTRA_EMAIL,"prueba@hotmail.com")
-                    sendIntent.putExtra(Intent.EXTRA_SUBJECT, "GeoInteligencia. Encuesta contestada " +
+                    sendIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("gisfrontera@gmail.com"))
+                    sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Encuesta contestada " +
                             "por ${sharedPref.getString(KEY_NAME,".")}")
                     sendIntent.putExtra(Intent.EXTRA_TEXT,"Enviado desde Geointeligencia App")
                     sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
@@ -112,15 +113,10 @@ class PollFragment: Fragment(R.layout.fragment_poll){
                 } catch(e: Exception){
 
                 }
-                //Toast.makeText(context,"Conectado a Internet",Toast.LENGTH_SHORT).show()
             }
             else if (isConnected && !isSec1Answered) Toast.makeText(context,"Conteste primero la encuesta",Toast.LENGTH_SHORT).show()
             else Toast.makeText(context,"Sin conexión. Intente más tarde.",Toast.LENGTH_SHORT).show()
 
-
-
-            //val uri = Uri.fromFile()
-            //Toast.makeText(context,"",Toast.LENGTH_SHORT).show()
         }
     }
 
