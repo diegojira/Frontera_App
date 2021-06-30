@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment
 import com.cicipn.geointeligencia_anp_app.R
 import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_NAME
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_poll.*
 import org.apache.commons.csv.CSVFormat
 import org.apache.commons.csv.CSVPrinter
@@ -45,7 +46,7 @@ class PollFragment: Fragment(R.layout.fragment_poll){
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        requireActivity().tvToolbarTitle.text = "Tu opinión"
         //Botón Sección Bienvenido
         btnSeccionBienvenido.setOnClickListener{
                 val intent = Intent(activity, Sec1::class.java)
@@ -54,14 +55,16 @@ class PollFragment: Fragment(R.layout.fragment_poll){
 
         //Botón Sección Servicios
         btnSeccionServicios.setOnClickListener{
-            val intent = Intent(activity, Sec2::class.java)
-            startActivity(intent)
+            Toast.makeText(context, "¡Sección en construcción!", Toast.LENGTH_SHORT).show()
+           // val intent = Intent(activity, Sec2::class.java)
+            //startActivity(intent)
         }
 
         //Botón Sección Regrese pronto
         btnSeccionRegresa.setOnClickListener{
-            val intent = Intent(activity, Sec3::class.java)
-            startActivity(intent)
+            Toast.makeText(context, "¡Sección en construcción!", Toast.LENGTH_SHORT).show()
+            //val intent = Intent(activity, Sec3::class.java)
+            //startActivity(intent)
         }
 
         btnEnviarEnc.setOnClickListener{

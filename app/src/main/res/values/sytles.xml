@@ -37,7 +37,7 @@
     </style>
 
     <style name="TextViewStyle" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
 
     </style>
 

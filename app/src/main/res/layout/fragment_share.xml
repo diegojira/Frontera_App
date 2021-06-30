@@ -49,23 +49,24 @@
         android:text="Tiempo Total"
         app:layout_constraintBottom_toTopOf="@+id/guidelineTop"
         app:layout_constraintEnd_toEndOf="@+id/tvTotalTime"
+        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="@+id/tvTotalTime"
         app:layout_constraintTop_toBottomOf="@+id/tvTotalTime"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintVertical_bias="0.454" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.26" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7017784" />
+        app:layout_constraintGuide_percent="0.81" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -80,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Comparte tus aportaciones:"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/guidelineTop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -90,15 +91,15 @@
 
     <ImageView
         android:id="@+id/ivPhotoToShare"
-        android:layout_width="220dp"
-        android:layout_height="230dp"
+        android:layout_width="292dp"
+        android:layout_height="217dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTotalTimeInfo"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.307" />
 
     <Button
         android:id="@+id/btnShareFacebook"
@@ -106,11 +107,11 @@
         android:layout_height="wrap_content"
         android:text="FACEBOOK"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnTakePhoto"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.653" />
 
     <Button
         android:id="@+id/btnTakePhoto"
@@ -120,6 +121,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="@+id/ivPhotoToShare"
         app:layout_constraintStart_toStartOf="@+id/ivPhotoToShare"
-        app:layout_constraintTop_toBottomOf="@+id/ivPhotoToShare" />
+        app:layout_constraintTop_toBottomOf="@+id/ivPhotoToShare"
+        app:layout_constraintVertical_bias="0.912" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

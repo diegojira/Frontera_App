@@ -46,10 +46,9 @@ class MapFragment: Fragment(R.layout.fragment_map){
         Configuration.getInstance().userAgentValue = BuildConfig.APPLICATION_ID;
         val controller: MapController = osmMap.controller as MapController
 
-        val geoPoint = GeoPoint(19.5020228, -99.0264017)
-
+        val geoPoint = GeoPoint(18.189538, -97.247640)
         controller.setCenter(geoPoint)
-        controller.setZoom(18)
+        controller.setZoom(14)
     }
 
 }
