@@ -17,6 +17,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import com.cicipn.geointeligencia_anp_app.R
+import com.cicipn.geointeligencia_anp_app.other.Constants
 import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_NAME
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
@@ -72,11 +73,25 @@ class PollFragment: Fragment(R.layout.fragment_poll){
             val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
             val isConnected: Boolean = activeNetwork?.isConnectedOrConnecting == true
+            //Revisión si ya se ha contestado la encuesta
+            val isSec1Answered = sharedPref.getBoolean(Constants.KEY_SEND1,false)
+            //Ya que estén implementadas las secciones 2 y 3, descomentar las siguientes dos líneas
+            //val isSec2Answered = sharedPref.getBoolean(Constants.KEY_SEND2,false)
+            //val isSecAnswered = sharedPref.getBoolean(Constants.KEY_SEND2,false)
 
-            if (isConnected){
+            if (isConnected && isSec1Answered){
                 val data = StringBuilder()
-                data.append("ID,Q1,Q2,Q3")
-                data.append("\nDiego,1,3,5")
+                data.append("ID,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10\n")
+                val admin = AdminSQLiteOpenHelper(requireActivity(),"Encuesta",null,1)
+                val db = admin.readableDatabase
+                val result = db.rawQuery("SELECT * FROM RESPUESTAS",null)
+                if (result.moveToFirst()){
+                    //Toast.makeText(context,"Conectado a Internet "+result.columnCount.toString(),Toast.LENGTH_SHORT).show()
+                        for (i in 0..result.columnCount-1) {
+                            data.append(result.getString(i))
+                            data.append(",")
+                        }
+                }
                 try {
                     val out: FileOutputStream = requireContext().openFileOutput("encuesta_geointeligencia.csv", Context.MODE_PRIVATE)
                     out.write((data.toString()).toByteArray())
@@ -85,6 +100,7 @@ class PollFragment: Fragment(R.layout.fragment_poll){
                     val path: Uri = FileProvider.getUriForFile(requireContext(),"com.example.geointeligencia_ANP_App.FileProvider",fileLocation)
                     val sendIntent = Intent(Intent.ACTION_SEND)
                     sendIntent.setType("text/csv")
+                    //Falta agregar el destinatario.
                     sendIntent.putExtra(Intent.EXTRA_EMAIL,"prueba@hotmail.com")
                     sendIntent.putExtra(Intent.EXTRA_SUBJECT, "GeoInteligencia. Encuesta contestada " +
                             "por ${sharedPref.getString(KEY_NAME,".")}")
@@ -96,10 +112,10 @@ class PollFragment: Fragment(R.layout.fragment_poll){
                 } catch(e: Exception){
 
                 }
-                Toast.makeText(context,"Conectado a Internet",Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context,"Conectado a Internet",Toast.LENGTH_SHORT).show()
             }
-
-            else Toast.makeText(context,"Desconectado a Internet",Toast.LENGTH_SHORT).show()
+            else if (isConnected && !isSec1Answered) Toast.makeText(context,"Conteste primero la encuesta",Toast.LENGTH_SHORT).show()
+            else Toast.makeText(context,"Sin conexión. Intente más tarde.",Toast.LENGTH_SHORT).show()
 
 
 
