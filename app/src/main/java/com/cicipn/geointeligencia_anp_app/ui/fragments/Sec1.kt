@@ -64,19 +64,19 @@ class Sec1 : AppCompatActivity() {
                     for (i in idsRG) {
                         var respuesta = respuestaRadioButton(i) as Array<CharSequence>
                         values.put("Q"+respuesta.get(0),respuesta.get(1).toString())
-                        mensaje += "\nPregunta: " + respuesta.get(0) + " respuesta seleccionada: " + respuesta.get(
-                                1
-                        )
+                        //mensaje += "\nPregunta: " + respuesta.get(0) + " respuesta seleccionada: " + respuesta.get(
+                             //   1
+                        //)
                     }
-                    mensaje += "Pregunta: 3 respuesta: " + q3_lugar.selectedItem // El item seleccionado en el spin
+                    //mensaje += "Pregunta: 3 respuesta: " + q3_lugar.selectedItem // El item seleccionado en el spin
                     values.put("Q3",q3_lugar.selectedItem.toString())
                     for (i in idsCG) {
                         var respuesta = respuestaChip(i) as Array<CharSequence>
                         values.put("Q"+respuesta.get(0),respuesta.get(1).toString())
-                        mensaje += "\nPregunta: " + respuesta.get(0) + " respuestas seleccionadas: " + respuesta.get(
-                                1)
+                        //mensaje += "\nPregunta: " + respuesta.get(0) + " respuestas seleccionadas: " + respuesta.get(
+                         //       1)
                     }
-                    //enviado = true
+                    mensaje = "Tus respuestas han sido guardadas."
                     sharedPref.edit()
                             .putBoolean(KEY_SEND1,true)
                             .apply()
