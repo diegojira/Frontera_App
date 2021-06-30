@@ -52,6 +52,17 @@
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider{1259489261091147}"
             android:exported="true" />
+        
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.geointeligencia_ANP_App.FileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/directorio_db"/>
+        </provider>
+
     </application>
 
 </manifest>

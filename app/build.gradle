@@ -122,4 +122,6 @@ dependencies {
 
     // Share on social media
     implementation 'com.facebook.android:facebook-share:[5,6)'
+
+    implementation 'org.apache.commons:commons-csv:1.5'
 }
