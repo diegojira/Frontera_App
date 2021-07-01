@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.cicipn.geointeligencia_anp_app.R
 import com.cicipn.geointeligencia_anp_app.other.Constants
+import com.cicipn.geointeligencia_anp_app.ui.fragments.IOnBackPressed
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -44,6 +45,31 @@ class MainActivity : AppCompatActivity() {
     private fun navigateToTrackingFragmentIfNeeded(intent: Intent?){
         if(intent?.action == Constants.ACTION_SHOW_TRACKING_FRAGMENT) {
             navHostFragment.findNavController().navigate(R.id.action_global_trackingFragment)
+        }
+    }
+
+    //Inhabilitara el boton de regresar
+    override fun onBackPressed() {
+        val fragment1 =
+            this.supportFragmentManager.findFragmentById(R.id.shareFragment)
+        (fragment1 as? IOnBackPressed)?.onBackPressed()?.not()?.let {
+            super.onBackPressed()
+        }
+        val fragment2 =
+            this.supportFragmentManager.findFragmentById(R.id.routeFragment)
+        (fragment2 as? IOnBackPressed)?.onBackPressed()?.not()?.let {
+            super.onBackPressed()
+        }
+        val fragment3 =
+            this.supportFragmentManager.findFragmentById(R.id.mapFragment)
+        (fragment3 as? IOnBackPressed)?.onBackPressed()?.not()?.let {
+            super.onBackPressed()
+        }
+
+        val fragment4 =
+            this.supportFragmentManager.findFragmentById(R.id.pollFragment)
+        (fragment4 as? IOnBackPressed)?.onBackPressed()?.not()?.let {
+            super.onBackPressed()
         }
     }
 }

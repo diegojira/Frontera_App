@@ -66,6 +66,7 @@ class ShareFragment: Fragment(R.layout.fragment_share){
     }
 
 
+
     // To get fresh data
     private fun subscribeToObservers(){
         viewModel.totalTimeRoute.observe(viewLifecycleOwner, Observer {
@@ -84,5 +85,6 @@ class ShareFragment: Fragment(R.layout.fragment_share){
             }
         })
     }
+
 
 }

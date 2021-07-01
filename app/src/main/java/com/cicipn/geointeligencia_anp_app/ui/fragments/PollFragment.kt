@@ -114,6 +114,7 @@ class PollFragment: Fragment(R.layout.fragment_poll){
 
                 }
             }
+
             else if (isConnected && !isSec1Answered) Toast.makeText(context,"Conteste primero la encuesta",Toast.LENGTH_SHORT).show()
             else Toast.makeText(context,"Sin conexión. Intente más tarde.",Toast.LENGTH_SHORT).show()
 
