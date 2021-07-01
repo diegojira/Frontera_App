@@ -8,6 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.cicipn.geointeligencia_anp_app.R
+import com.cicipn.geointeligencia_anp_app.other.Constants
 import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_FIRST_TIME_TOGGLE
 import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_NAME
 import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_SEND1
@@ -31,7 +32,8 @@ class WelcomeFragment: Fragment(R.layout.fragment_welcome){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        sharedPref.edit().putBoolean(KEY_FIRST_TIME_TOGGLE, true)
+        isFirstAppOpen = sharedPref.getBoolean(Constants.KEY_FIRST_TIME_TOGGLE,true)
         if(!isFirstAppOpen) {
             val navOptions = NavOptions.Builder()
                     .setPopUpTo(R.id.welcomeFragment, true)
