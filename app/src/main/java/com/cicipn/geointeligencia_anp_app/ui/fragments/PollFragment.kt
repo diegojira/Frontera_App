@@ -57,8 +57,8 @@ class PollFragment: Fragment(R.layout.fragment_poll){
         //Botón Sección Servicios
         btnSeccionServicios.setOnClickListener{
             Toast.makeText(context, "¡Sección en construcción!", Toast.LENGTH_SHORT).show()
-           // val intent = Intent(activity, Sec2::class.java)
-            //startActivity(intent)
+            val intent = Intent(activity, Sec2::class.java)
+            startActivity(intent)
         }
 
         //Botón Sección Regrese pronto

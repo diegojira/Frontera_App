@@ -158,11 +158,6 @@
                 android:text="@string/q4" />
 
 
-            android:id="@+id/cb4_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cb_4_1"
-
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/cg4"
