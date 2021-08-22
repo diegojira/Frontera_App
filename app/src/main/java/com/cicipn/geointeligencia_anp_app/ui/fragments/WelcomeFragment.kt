@@ -2,6 +2,7 @@ package com.cicipn.geointeligencia_anp_app.ui.fragments
 
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -32,9 +33,13 @@ class WelcomeFragment: Fragment(R.layout.fragment_welcome){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //super.onViewCreated(view, savedInstanceState)
         sharedPref.edit().putBoolean(KEY_FIRST_TIME_TOGGLE, true)
         isFirstAppOpen = sharedPref.getBoolean(Constants.KEY_FIRST_TIME_TOGGLE,true)
+
         if(!isFirstAppOpen) {
+            Log.d("Okkkk","Entre al if")
             val navOptions = NavOptions.Builder()
                     .setPopUpTo(R.id.welcomeFragment, true)
                     .build()
@@ -49,6 +54,7 @@ class WelcomeFragment: Fragment(R.layout.fragment_welcome){
             val success = writeNicknameToSharedPref()
             if (success) {
                 findNavController().navigate(R.id.action_welcomeFragment_to_routeFragment)
+
             } else {
                 Snackbar.make(requireView(), "Por favor ingresa un apodo", Snackbar.LENGTH_SHORT).show()
             }
