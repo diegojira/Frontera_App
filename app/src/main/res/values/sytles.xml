@@ -70,4 +70,9 @@
         <item name="android:textColor">@color/letra</item>
     </style>
 
+    <style name="cBstyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/letra</item>
+    </style>
+
 </resources>
