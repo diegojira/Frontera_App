@@ -2,17 +2,17 @@
 
     <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Original AppCompat attributes. -->
-        <item name="colorPrimary">@color/md_blue_900</item>
-        <item name="colorSecondary">@color/md_blue_500</item>
+        <item name="colorPrimary">@color/guinda</item>
+        <item name="colorSecondary">@color/guinda_claro</item>
         <item name="android:colorBackground">@color/fondoEncuesta</item>
         <item name="colorError">@color/errorColor</item>
         <item name="android:textColor">@color/letra</item>
         <item name="android:textSize">17dp</item>
         <!-- New MaterialComponents attributes. -->
         <item name="colorPrimaryVariant">@android:color/white</item>
-        <item name="colorSecondaryVariant">@color/md_blue_400</item>
+        <item name="colorSecondaryVariant">@color/guinda_claro</item>
         <!--> toolbar color -->
-        <item name="colorSurface">@color/md_blue_900</item>
+        <item name="colorSurface">@color/guinda</item>
         <item name="colorOnPrimary">@color/md_blue_50</item>
         <item name="colorOnSecondary">@color/md_blue_50</item>
         <item name="colorOnBackground">@color/md_blue_50</item>
@@ -56,7 +56,7 @@
 
     <style name="CustomChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
         <item name="chipSurfaceColor">@color/fondoEncuesta</item>
-        <item name="chipStrokeColor">@color/azul</item>
+        <item name="chipStrokeColor">@color/colorAccent</item>
         <item name="android:textColor">@color/letra</item>
         <item name="chipStrokeWidth">2dp</item>
         <item name="android:checkable">true</item>
