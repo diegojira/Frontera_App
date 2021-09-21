@@ -2,6 +2,8 @@
 <resources>
     <color name="fondoEncuesta">#E1EAEC</color>
     <color name="letra">#2C2F30</color>
+    <color name="guinda">#F3330202</color>
+    <color name="guinda_claro">#C8330202</color>
     <color name="azul">#8DAAD2</color>
     <color name="md_blue_50">#E3F2FD</color>
     <color name="md_blue_100">#BBDEFB</color>
@@ -16,7 +18,7 @@
     <color name="md_blue_A200">#448AFF</color>
     <color name="md_blue_A400">#2979FF</color>
     <color name="md_blue_A700">#2962FF</color>
-    <color name="colorAccent">#FFE600</color>
+    <color name="colorAccent">#9C6464</color>
     <color name="errorColor">#D50000</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
