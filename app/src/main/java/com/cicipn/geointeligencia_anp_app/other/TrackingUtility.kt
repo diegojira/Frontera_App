@@ -9,6 +9,7 @@ import com.cicipn.geointeligencia_anp_app.services.Polyline
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.data.geojson.GeoJsonFeature
 import com.google.maps.android.data.geojson.GeoJsonLineString
+import org.osmdroid.util.GeoPoint
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 
@@ -50,8 +51,8 @@ object TrackingUtility {
         return distance
     }
 
-    fun createGeoJson(polyline: Polyline): MutableList<LatLng> {
-        val lineStringArray: MutableList<LatLng> = ArrayList()
+    fun createGeoJson(polyline: Polyline): MutableList<GeoPoint> {
+        val lineStringArray: MutableList<GeoPoint> = ArrayList()
         for(i in 0 until polyline.size) {
             lineStringArray.add(polyline[i])
         }

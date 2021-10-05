@@ -16,6 +16,7 @@ import com.cicipn.geointeligencia_anp_app.other.Constants.ACTION_STOP_SERVICE
 import com.cicipn.geointeligencia_anp_app.other.Constants.POLYLINE_COLOR
 import com.cicipn.geointeligencia_anp_app.other.Constants.POLYLINE_WIDTH
 import com.cicipn.geointeligencia_anp_app.other.TrackingUtility
+import com.cicipn.geointeligencia_anp_app.services.PolyLines
 import com.cicipn.geointeligencia_anp_app.services.Polyline
 import com.cicipn.geointeligencia_anp_app.services.TrackingService
 import com.cicipn.geointeligencia_anp_app.ui.viewmodels.MainViewModel
@@ -232,7 +233,7 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
             for(polyline in pathPoints) {
                 distanceInMeters += TrackingUtility.calculatePolylineLength(polyline).toInt()
             }
-            var listGeoJsonFeature: MutableList<LatLng> = ArrayList()
+            var listGeoJsonFeature: MutableList<GeoPoint> = ArrayList()
             // var listGeoJsonFeature: MutableList<MutableList<LatLng>>
 
             for(polyline in pathPoints) {
@@ -241,19 +242,19 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
             }
             Timber.d("El tamaño de la lista: ${listGeoJsonFeature?.size}")
 
-            val lineString = GeoJsonLineString(listGeoJsonFeature)
-            val lineStringJSON = Gson().toJson(lineString)
+            //val lineString = GeoJsonLineString(listGeoJsonFeature)
+            //val lineStringJSON = Gson().toJson(lineString)
 
             // val geoJsonRoute = GeoJsonFeature(lineString, null, null, null)
 
 
             //geoJsonRoute.
             // val avgSpeed = round ( (distanceInMeters / 1000f) / (curTimeMillis / 1000f / 60 / 60) * 10) / 10f
-            val dateTimestamp = Calendar.getInstance().timeInMillis
+            //val dateTimestamp = Calendar.getInstance().timeInMillis
             // val route = Route(bmp,  dateTimestamp, distanceInMeters, curTimeMillis)
             //val route = Route(geoJsonRoute ,dateTimestamp, distanceInMeters, curTimeMillis)
-            val route = Route(lineStringJSON, dateTimestamp, distanceInMeters, curTimeMillis)
-            viewModel.insertRoute(route)
+            //val route = Route(lineStringJSON, dateTimestamp, distanceInMeters, curTimeMillis)
+            //viewModel.insertRoute(route)
             Snackbar.make(
                     requireActivity().findViewById(R.id.rootView),
                     "Ruta guardada satisfactoriamente",
@@ -265,10 +266,14 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
 
     private fun addAllPolylines() {
         for(polyline in pathPoints) {
-            val polylineOptions = PolylineOptions()
+            val polyLine = org.osmdroid.views.overlay.Polyline();    //Create an empty polyline
+            polyLine.setPoints(polyline)
+            /*val polylineOptions = PolylineOptions()
                     .color(POLYLINE_COLOR)
                     .width(POLYLINE_WIDTH)
-                    .addAll(polyline)
+                    .addAll(polyline)*/
+            osmMap.overlays.add(polyLine); //Add the polyline to the map
+            osmMap.invalidate();
             // map?.addPolyline(polylineOptions)
         }
     }
@@ -277,10 +282,18 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
         if(pathPoints.isNotEmpty() && pathPoints.last().size > 1){
             val preLastLatLng = pathPoints.last()[pathPoints.last().size - 2]
             val lastLatLng = pathPoints.last().last()
-            val polyLineOptions = PolylineOptions()
+            val geoPoints = ArrayList<GeoPoint>()
+            val polyLine = org.osmdroid.views.overlay.Polyline();    //Create an empty polyline
+            geoPoints.add(preLastLatLng)
+            geoPoints.add(lastLatLng)
+            polyLine.setPoints(geoPoints)
+
+            /*val polyLineOptions = PolylineOptions()
                     .color(POLYLINE_COLOR)
                     .width(POLYLINE_WIDTH)
-                    .add(preLastLatLng)
+                    .add(preLastLatLng)*/
+            osmMap.overlays.add(polyLine)
+            osmMap.invalidate();
                 // Map?.addPolyLine(polyLineOptions)
         }
     }
@@ -311,11 +324,11 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
         Configuration.getInstance().userAgentValue = BuildConfig.APPLICATION_ID;
         controller = osmMap.controller as MapController
 
-        val geoPoint = GeoPoint(19.5020228, -99.0264017)
+        //val geoPoint = GeoPoint(19.5020228, -99.0264017)
 
 
-        controller.setCenter(geoPoint)
-        controller.setZoom(18)
+        //controller.setCenter(geoPoint)
+        //controller.setZoom(18)
 
         myLocationOverlay = MyLocationNewOverlay(GpsMyLocationProvider(requireActivity().applicationContext), osmMap)
         myLocationOverlay.enableMyLocation()
