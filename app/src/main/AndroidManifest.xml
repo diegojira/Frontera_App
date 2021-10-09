@@ -24,6 +24,7 @@
         <activity android:name=".ui.fragments.Sec3"></activity>
         <activity android:name=".ui.fragments.Sec2" />
         <activity android:name=".ui.fragments.Sec1" />
+
         <activity
             android:name=".ui.MainActivity"
             android:launchMode="singleTask">
@@ -62,6 +63,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/directorio_db"/>
         </provider>
+
 
     </application>
 
