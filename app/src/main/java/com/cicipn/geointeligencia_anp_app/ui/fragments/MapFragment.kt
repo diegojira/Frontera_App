@@ -17,12 +17,15 @@ import org.osmdroid.views.MapController
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Polygon
 import org.osmdroid.views.overlay.Polyline
+import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
+import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
 import java.util.*
 
 @AndroidEntryPoint
 class MapFragment: Fragment(R.layout.fragment_map){
 
     private lateinit var osmMap: MapView
+    private lateinit var locationOverlay: MyLocationNewOverlay
     private var previousLat = 0.0;
     private var previousLong = 0.0
     private var newLat = 0.0;
@@ -47,13 +50,28 @@ class MapFragment: Fragment(R.layout.fragment_map){
         osmMap.setMultiTouchControls(true)
 
         val ctx = requireActivity().applicationContext
-        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
-        Configuration.getInstance().userAgentValue = BuildConfig.APPLICATION_ID;
+        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx))
+        Configuration.getInstance().userAgentValue = BuildConfig.APPLICATION_ID
         val controller: MapController = osmMap.controller as MapController
-
-        val geoPoint = GeoPoint(18.189538, -97.247640)
-        controller.setCenter(geoPoint)
         controller.setZoom(18)
+
+        locationOverlay = MyLocationNewOverlay(GpsMyLocationProvider(context), osmMap)
+        this.locationOverlay.enableMyLocation()
+        locationOverlay.runOnFirstFix( object: Runnable {
+            override fun run() {
+                requireActivity().runOnUiThread( object: Runnable {
+                    override fun run() {
+                        val geoPoint = GeoPoint(locationOverlay.myLocation)
+                        controller.animateTo(locationOverlay.myLocation)
+                        controller.setCenter(geoPoint)
+                    }
+                })
+            }
+        })
+
+        osmMap.overlays.add(locationOverlay)
+
+    /*
         previousLat = 18.189538;
         previousLong = -97.247640
 
@@ -73,7 +91,7 @@ class MapFragment: Fragment(R.layout.fragment_map){
                 previousLong = newLong
             }
         }, 0, 5000) //put here time 1000 milliseconds=1 second
-
+*/
     }
 
 }

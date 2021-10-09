@@ -34,16 +34,16 @@ import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationRequest.PRIORITY_HIGH_ACCURACY
 import com.google.android.gms.location.LocationResult
-import com.google.android.gms.maps.model.LatLng
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.osmdroid.util.GeoPoint
 import timber.log.Timber
 import javax.inject.Inject
 
-typealias Polyline = MutableList<LatLng>
+typealias Polyline = MutableList<GeoPoint>
 typealias PolyLines = MutableList<Polyline>
 // we need Lifecycle Service to pass  an instance to the observe function
 @AndroidEntryPoint
@@ -224,7 +224,7 @@ class TrackingService : LifecycleService() {
     private fun addPathPoint(location: Location?){
         // Check if the location isn't null
         location?.let{
-            val pos = LatLng(location.latitude, location.longitude)
+            val pos = GeoPoint(location.latitude, location.longitude)
             // add this position to the polyline
             pathPoints.value?.apply {
                 last().add(pos)
