@@ -74,6 +74,9 @@
                 android:text="@string/q21"
                 android:textSize="18sp" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <RadioGroup
                 android:id="@+id/rg_q21_regresa_a"
                 android:layout_width="match_parent"
@@ -126,20 +129,18 @@
                     android:contentDescription="5"
                     android:text="@string/rb21_e" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <RadioButton
                         android:id="@+id/rb21_extra"
                         style="@style/rBStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="21"
                         android:layout_weight="1"
                         android:text="f. Otras" />
 
                     <EditText
-                        android:id="@+id/q21et"
+                        android:id="@+id/extra21"
                         style="@style/rBStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -151,8 +152,9 @@
                         android:padding="10sp"
                         android:textColorHint="@color/md_blue_900" />
 
-                </RelativeLayout>
             </RadioGroup>
+            </RelativeLayout>
+
 
             <TextView
                 android:id="@+id/et_q22_regresa"
@@ -212,11 +214,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/q23"
                 android:textSize="18sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <RadioGroup
                 android:id="@+id/rg_q23_regresa_a"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="4"
                 android:orientation="vertical">
 
                 <RadioButton
@@ -225,6 +231,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:contentDescription="1"
                     android:text="@string/rb23_a" />
 
                 <RadioButton
@@ -233,6 +240,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:contentDescription="2"
                     android:text="@string/rb23_b" />
 
                 <RadioButton
@@ -241,6 +249,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:contentDescription="3"
                     android:text="Los recorridos guiados" />
 
                 <RadioButton
@@ -249,34 +258,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:contentDescription="4"
                     android:text="El personal de apoyo turístico" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
-                    <RadioButton
-                        android:id="@+id/rb23_extra"
-                        style="@style/rBStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Otro" />
+                <RadioButton
+                    android:id="@+id/rb23_extra"
+                    style="@style/rBStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="23"
+                    android:text="Otro" />
 
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        style="@style/rBStyle"
-                        android:padding="10sp"
-                        android:layout_toEndOf="@id/rb23_extra"
-                        android:layout_centerInParent="true"
-                        android:textColorHint="@color/md_blue_900"
-                        android:hint="Especifique"
-                        />
 
-                </RelativeLayout>
+                <EditText
+                    android:id="@+id/extra23"
+                    style="@style/rBStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/rb23_extra"
+                    android:hint="Especifique"
+                    android:visibility="gone"
+                    android:padding="10sp"
+                    android:textColorHint="@color/md_blue_900" />
 
             </RadioGroup>
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/et_q24_regresa"
@@ -284,11 +294,15 @@
                 android:layout_height="wrap_content"
                 android:text="24. ¿La visita al ANP cumplió con sus expectativas?"
                 android:textSize="18sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <RadioGroup
                 android:id="@+id/rg_q24_regresa_a"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="5"
                 android:orientation="vertical">
 
                 <RadioButton
@@ -297,34 +311,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:contentDescription="1"
                     android:text="@string/rb24_a" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rb24_b"
+                    style="@style/rBStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="24"
+                    android:text="@string/rb24_b" />
 
-                    <RadioButton
-                        android:id="@+id/rb24_b"
-                        style="@style/rBStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/rb24_b" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        style="@style/rBStyle"
-                        android:padding="10sp"
-                        android:layout_toEndOf="@id/rb24_b"
-                        android:layout_centerInParent="true"
-                        android:textColorHint="@color/md_blue_900"
-                        android:hint="Su respuesta"
-                        />
-
-                </RelativeLayout>
+                <EditText
+                    android:id="@+id/extra24"
+                    style="@style/rBStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/rb24_b"
+                    android:hint="Su respuesta"
+                    android:visibility="gone"
+                    android:padding="10sp"
+                    android:textColorHint="@color/md_blue_900" />
 
             </RadioGroup>
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/et_q25_regresa"
@@ -337,6 +350,7 @@
                 android:id="@+id/rg_q25_regresa_a"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="6"
                 android:orientation="vertical">
 
                 <RadioButton
@@ -363,45 +377,54 @@
                 android:text="@string/q26"
                 android:textSize="18sp" />
 
-            <CheckBox
-                android:id="@+id/cb26_a"
-                style="@style/cBstyle"
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cG26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip26a"
+                style="@style/CustomChipChoice"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/cb26_a"
                 />
 
-            <CheckBox
-                android:id="@+id/cb26_b"
-                style="@style/cBstyle"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip26b"
+                style="@style/CustomChipChoice"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/cb26_b"
                 />
 
-            <CheckBox
-                android:id="@+id/cb26_c"
-                style="@style/cBstyle"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip26c"
+                style="@style/CustomChipChoice"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/cb26_c"
                 />
 
-            <CheckBox
-                android:id="@+id/cb26_d"
-                style="@style/cBstyle"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip26d"
+                style="@style/CustomChipChoice"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/cb26_d"
                 />
 
-            <CheckBox
-                android:id="@+id/cb26_e"
-                style="@style/cBstyle"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip26e"
+                style="@style/CustomChipChoice"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/cb26_e"
                 />
+
+            </com.google.android.material.chip.ChipGroup>
 
             <TextView
                 android:id="@+id/et_q27_regresa"
@@ -539,58 +562,63 @@
                     android:layout_height="match_parent"
                     android:visibility="visible">
 
-                    <CheckBox
-                        android:id="@+id/cb29_a"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        style="@style/cBstyle"
-                        android:text="@string/cb29_a"
-                        />
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cG29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:selectionRequired="true"
+                        app:singleSelection="true">
 
-                    <CheckBox
-                        android:id="@+id/cb29_b"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_toEndOf="@id/cb29_a"
-                        android:text="@string/cb29_b" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip29a"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cb29_a" />
 
-                    <CheckBox
-                        android:id="@+id/cb29_c"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_toEndOf="@id/cb29_b"
-                        android:text="@string/cb29_c" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip29b"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/chip29a"
+                            android:text="@string/cb29_b" />
 
-                    <CheckBox
-                        android:id="@+id/cb29_d"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_below="@id/cb29_a"
-                        android:text="@string/cb29_d" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip29c"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/chip29b"
+                            android:text="@string/cb29_c" />
 
-                    <CheckBox
-                        android:id="@+id/cb29_e"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_below="@id/cb29_a"
-                        android:layout_toEndOf="@id/cb29_d"
-                        android:text="@string/cb29_e" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip29d"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chip29a"
+                            android:text="@string/cb29_d" />
 
-                    <CheckBox
-                        android:id="@+id/cb29_f"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_below="@id/cb29_a"
-                        android:layout_toEndOf="@id/cb29_e"
-                        android:text="@string/cb29_f" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip29e"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chip29a"
+                            android:layout_toEndOf="@id/chip29d"
+                            android:text="@string/cb29_e" />
 
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip29f"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chip29a"
+                            android:layout_toEndOf="@id/chip29e"
+                            android:text="@string/cb29_f" />
 
-
+                    </com.google.android.material.chip.ChipGroup>
                 </RelativeLayout>
 
                 <RadioButton
@@ -629,55 +657,63 @@
                     android:layout_height="match_parent"
                     android:visibility="visible">
 
-                    <CheckBox
-                        android:id="@+id/cb30_a"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        style="@style/cBstyle"
-                        android:text="@string/cb29_a"
-                        />
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cG30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:selectionRequired="true"
+                        app:singleSelection="true">
 
-                    <CheckBox
-                        android:id="@+id/cb30_b"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_toEndOf="@id/cb30_a"
-                        android:text="@string/cb29_b" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip30a"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cb30_a" />
 
-                    <CheckBox
-                        android:id="@+id/cb30_c"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_toEndOf="@id/cb30_b"
-                        android:text="@string/cb29_c" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip30b"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/chip30a"
+                            android:text="@string/cb30_b" />
 
-                    <CheckBox
-                        android:id="@+id/cb30_d"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_below="@id/cb30_a"
-                        android:text="@string/cb29_d" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip30c"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/chip29b"
+                            android:text="@string/cb29_c" />
 
-                    <CheckBox
-                        android:id="@+id/cb30_e"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_below="@id/cb30_a"
-                        android:layout_toEndOf="@id/cb30_d"
-                        android:text="@string/cb29_e" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip30d"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chip29a"
+                            android:text="@string/cb29_d" />
 
-                    <CheckBox
-                        android:id="@+id/cb30_f"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_below="@id/cb30_a"
-                        android:layout_toEndOf="@id/cb30_e"
-                        android:text="@string/cb29_f" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip30e"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chip29a"
+                            android:layout_toEndOf="@id/chip29d"
+                            android:text="@string/cb29_e" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip30f"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chip29a"
+                            android:layout_toEndOf="@id/chip29e"
+                            android:text="@string/cb29_f" />
+
+                    </com.google.android.material.chip.ChipGroup>
 
                 </RelativeLayout>
 
