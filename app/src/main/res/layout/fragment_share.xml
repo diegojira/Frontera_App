@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTotalDistance"
         android:layout_width="wrap_content"
@@ -91,8 +92,8 @@
 
     <ImageView
         android:id="@+id/ivPhotoToShare"
-        android:layout_width="292dp"
-        android:layout_height="217dp"
+        android:layout_width="111dp"
+        android:layout_height="103dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,11 +102,23 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTotalTimeInfo"
         app:layout_constraintVertical_bias="0.307" />
 
-    <Button
+    <!-- <Button
         android:id="@+id/btnShareFacebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="FACEBOOK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTakePhoto"
+        app:layout_constraintVertical_bias="0.653" />-->
+
+    <Button
+        android:id="@+id/btnShareTwitter"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        app:icon="@drawable/gorjeo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"

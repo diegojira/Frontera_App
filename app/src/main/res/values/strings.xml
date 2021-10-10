@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">geointeligencia_ANP_App</string>
     <string name="google_maps_key"></string>
-    <string name="facebook_app_id">1259489261091147</string>
+
     <string name="bienv_tit">Bienvenido</string>
     <string name="bienv_ins"></string>
 
@@ -257,6 +257,8 @@
     <string name="actividad3">Actividad 3</string>
     <string name="actividad_1">Actividad 1</string>
     <string name="actividad4">Actividad 4</string>
+    <string name="cb30_a">Facebook</string>
+    <string name="cb30_b">Instagram</string>
 
-
+    <string name="facebook_app_id">682593826050763</string>
 </resources>
