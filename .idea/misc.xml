@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/miste/AndroidStudioProjects/Frontera_App/app/src/main/res/layout/fragment_map.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/miste/AndroidStudioProjects/Frontera_App/app/src/main/res/xml/network_security_config.xml" value="0.20520833333333333" />
         <entry key="app/src/main/res/layout/fragment_route.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_sec1.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/fragment_sec2.xml" value="0.5" />

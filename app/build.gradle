@@ -44,6 +44,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'com.android.volley:volley:1.2.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -110,8 +111,9 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     implementation 'android.arch.lifecycle:extensions:1.1.1'
-    // Open Street Maps OSMdroid
+    // Open Street Maps OSMdroid and OsmBonusPack
     implementation 'org.osmdroid:osmdroid-android:6.1.8'
+    implementation 'com.github.MKergall:osmbonuspack:6.7.0'
 
     // Maps SDK
     implementation 'com.google.maps.android:android-maps-utils:2.2.0'
@@ -122,6 +124,9 @@ dependencies {
 
     // Share on social media
     implementation 'com.facebook.android:facebook-share:[5,6)'
+
+    //OKHTTP3
+    implementation("com.squareup.okhttp3:okhttp:4.7.2")
 
     implementation 'org.apache.commons:commons-csv:1.5'
 }

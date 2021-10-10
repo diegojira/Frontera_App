@@ -3,32 +3,23 @@ package com.cicipn.geointeligencia_anp_app.ui.fragments
 import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.cicipn.geointeligencia_anp_app.R
-import com.cicipn.geointeligencia_anp_app.db.Route
 import com.cicipn.geointeligencia_anp_app.other.Constants.ACTION_PAUSE_SERVICE
 import com.cicipn.geointeligencia_anp_app.other.Constants.ACTION_START_OR_RESUME_SERVICE
 import com.cicipn.geointeligencia_anp_app.other.Constants.ACTION_STOP_SERVICE
 import com.cicipn.geointeligencia_anp_app.other.Constants.POLYLINE_COLOR
 import com.cicipn.geointeligencia_anp_app.other.Constants.POLYLINE_WIDTH
 import com.cicipn.geointeligencia_anp_app.other.TrackingUtility
-import com.cicipn.geointeligencia_anp_app.services.PolyLines
 import com.cicipn.geointeligencia_anp_app.services.Polyline
 import com.cicipn.geointeligencia_anp_app.services.TrackingService
 import com.cicipn.geointeligencia_anp_app.ui.viewmodels.MainViewModel
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.LatLngBounds
-import com.google.android.gms.maps.model.PolylineOptions
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-import com.google.gson.Gson
-import com.google.maps.android.data.geojson.GeoJsonFeature
-import com.google.maps.android.data.geojson.GeoJsonLineString
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_tracking.*
@@ -40,9 +31,12 @@ import org.osmdroid.views.MapController
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
+import com.cicipn.geointeligencia_anp_app.other.UploadUtility
 import timber.log.Timber
 import java.util.*
-import kotlin.math.round
+import org.osmdroid.bonuspack.kml.KmlDocument
+import java.io.File
+
 
 const val CANCEL_TRACKING_DIALOG_TAG = "CancelDialog"
 
@@ -52,6 +46,7 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
 
     private var isTracking = false
     private var pathPoints = mutableListOf<Polyline>()
+    private var arrayPolyLines = mutableListOf<org.osmdroid.views.overlay.Polyline>()
     // Map Open Street Maps
     private lateinit var osmMap: MapView
     private lateinit var myLocationOverlay: MyLocationNewOverlay
@@ -229,23 +224,43 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
 */
     private fun endRouteAndSaveToDb() {
         // map?.snapshot{ bmp ->
-            var distanceInMeters = 0
-            for(polyline in pathPoints) {
-                distanceInMeters += TrackingUtility.calculatePolylineLength(polyline).toInt()
-            }
-            var listGeoJsonFeature: MutableList<GeoPoint> = ArrayList()
-            // var listGeoJsonFeature: MutableList<MutableList<LatLng>>
+        var distanceInMeters = 0
+        for(polyline in pathPoints) {
+            distanceInMeters += TrackingUtility.calculatePolylineLength(polyline).toInt()
+        }
+        var listGeoJsonFeature: MutableList<GeoPoint> = ArrayList()
+        // var listGeoJsonFeature: MutableList<MutableList<LatLng>>
 
-            for(polyline in pathPoints) {
-                // listGeoJsonFeature?.add(TrackingUtility.createGeoJson(polyline))
-                listGeoJsonFeature = TrackingUtility.createGeoJson(polyline)
-            }
-            Timber.d("El tamaño de la lista: ${listGeoJsonFeature?.size}")
+        for(polyline in pathPoints) {
+            // listGeoJsonFeature?.add(TrackingUtility.createGeoJson(polyline))
+            listGeoJsonFeature = TrackingUtility.createGeoJson(polyline)
+        }
+        Timber.d("El tamaño de la lista: ${listGeoJsonFeature?.size}")
 
-            //val lineString = GeoJsonLineString(listGeoJsonFeature)
-            //val lineStringJSON = Gson().toJson(lineString)
+        //val lineString = GeoJsonLineString(listGeoJsonFeature)
+        //val lineStringJSON = Gson().toJson(lineString)
 
-            // val geoJsonRoute = GeoJsonFeature(lineString, null, null, null)
+        // val geoJsonRoute = GeoJsonFeature(lineString, null, null, null)
+
+        val kmlDocument = KmlDocument()
+        for (overlay in arrayPolyLines){
+            kmlDocument.mKmlRoot.addOverlay(overlay, kmlDocument)
+        }
+
+        val directory = context?.filesDir
+        val localFile = File(directory,"my_route.kml")
+        if(localFile.exists()){
+            localFile.delete()
+        }
+        if(localFile.createNewFile()){
+            Log.d("File", "File created")
+        }else{
+            Log.d("File", "Can't creat the file")
+        }
+
+        if(kmlDocument.saveAsGeoJSON(localFile)){
+            activity?.let { UploadUtility(it).uploadFile(localFile) } // Either Uri, File or String file path
+        }
 
 
             //geoJsonRoute.
@@ -255,12 +270,12 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
             //val route = Route(geoJsonRoute ,dateTimestamp, distanceInMeters, curTimeMillis)
             //val route = Route(lineStringJSON, dateTimestamp, distanceInMeters, curTimeMillis)
             //viewModel.insertRoute(route)
-            Snackbar.make(
-                    requireActivity().findViewById(R.id.rootView),
-                    "Ruta guardada satisfactoriamente",
-                    Snackbar.LENGTH_LONG
-            ).show()
-            stopRoute()
+        Snackbar.make(
+                requireActivity().findViewById(R.id.rootView),
+                "Ruta guardada satisfactoriamente",
+                Snackbar.LENGTH_LONG
+        ).show()
+        stopRoute()
        // }
     }
 
@@ -272,6 +287,7 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
                     .color(POLYLINE_COLOR)
                     .width(POLYLINE_WIDTH)
                     .addAll(polyline)*/
+            arrayPolyLines.add(polyLine)
             osmMap.overlays.add(polyLine); //Add the polyline to the map
             osmMap.invalidate();
             // map?.addPolyline(polylineOptions)
@@ -288,13 +304,9 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
             geoPoints.add(lastLatLng)
             polyLine.setPoints(geoPoints)
 
-            /*val polyLineOptions = PolylineOptions()
-                    .color(POLYLINE_COLOR)
-                    .width(POLYLINE_WIDTH)
-                    .add(preLastLatLng)*/
+            arrayPolyLines.add(polyLine)
             osmMap.overlays.add(polyLine)
             osmMap.invalidate();
-                // Map?.addPolyLine(polyLineOptions)
         }
     }
 
@@ -339,5 +351,9 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking){
             controller.setCenter(myLocationOverlay.myLocation)
         }}
         osmMap.overlays.add(myLocationOverlay)
+    }
+
+    private fun sendFileToServer(){
+
     }
 }
