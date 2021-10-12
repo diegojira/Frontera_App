@@ -261,4 +261,14 @@
     <string name="cb30_b">Instagram</string>
 
     <string name="facebook_app_id">682593826050763</string>
+    <string name="cb30_c">Twitter</string>
+    <string name="cb30_d">Youtube</string>
+    <string name="cb30_e">Pinterest</string>
+    <string name="cb30_f">Otro</string>
+    <string name="cb33_a">Facebook</string>
+    <string name="cb33_b">Instagram</string>
+    <string name="cb33_c">Twitter</string>
+    <string name="cb33_d">Youtube</string>
+    <string name="cb33_e">Pinterest</string>
+    <string name="cb33_f">Otro</string>
 </resources>

@@ -2,8 +2,8 @@
 <resources>
     <color name="fondoEncuesta">#E1EAEC</color>
     <color name="letra">#2C2F30</color>
-    <color name="guinda">#F3330202</color>
-    <color name="guinda_claro">#C8330202</color>
+    <color name="guinda">#6C1D45</color>
+    <color name="guinda_claro">#929C5177</color>
     <color name="azul">#8DAAD2</color>
     <color name="md_blue_50">#E3F2FD</color>
     <color name="md_blue_100">#BBDEFB</color>

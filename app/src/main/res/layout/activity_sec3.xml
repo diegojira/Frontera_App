@@ -684,34 +684,34 @@
                             style="@style/CustomChipChoice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/chip29b"
-                            android:text="@string/cb29_c" />
+                            android:layout_toEndOf="@id/chip30b"
+                            android:text="@string/cb30_c" />
 
                         <com.google.android.material.chip.Chip
                             android:id="@+id/chip30d"
                             style="@style/CustomChipChoice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/chip29a"
-                            android:text="@string/cb29_d" />
+                            android:layout_below="@id/chip30a"
+                            android:text="@string/cb30_d"/>
 
                         <com.google.android.material.chip.Chip
                             android:id="@+id/chip30e"
                             style="@style/CustomChipChoice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/chip29a"
-                            android:layout_toEndOf="@id/chip29d"
-                            android:text="@string/cb29_e" />
+                            android:layout_below="@id/chip30a"
+                            android:layout_toEndOf="@id/chip30d"
+                            android:text="@string/cb30_e" />
 
                         <com.google.android.material.chip.Chip
                             android:id="@+id/chip30f"
                             style="@style/CustomChipChoice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/chip29a"
-                            android:layout_toEndOf="@id/chip29e"
-                            android:text="@string/cb29_f" />
+                            android:layout_below="@id/chip30b"
+                            android:layout_toEndOf="@id/chip30e"
+                            android:text="@string/cb30_f" />
 
                     </com.google.android.material.chip.ChipGroup>
 
@@ -815,55 +815,63 @@
                     android:layout_height="match_parent"
                     android:visibility="visible">
 
-                    <CheckBox
-                        android:id="@+id/cb33_a"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        style="@style/cBstyle"
-                        android:text="@string/cb29_a"
-                        />
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cG33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:selectionRequired="true"
+                        app:singleSelection="true">
 
-                    <CheckBox
-                        android:id="@+id/cb33_b"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_toEndOf="@id/cb33_a"
-                        android:text="@string/cb29_b" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip33a"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cb33_a" />
 
-                    <CheckBox
-                        android:id="@+id/cb33_c"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_toEndOf="@id/cb33_b"
-                        android:text="@string/cb29_c" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip33b"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/chip33a"
+                            android:text="@string/cb33_b" />
 
-                    <CheckBox
-                        android:id="@+id/cb33_d"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_below="@id/cb33_a"
-                        android:text="@string/cb29_d" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip33c"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/chip33b"
+                            android:text="@string/cb33_c" />
 
-                    <CheckBox
-                        android:id="@+id/cb33_e"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_below="@id/cb33_a"
-                        android:layout_toEndOf="@id/cb33_d"
-                        android:text="@string/cb29_e" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip33d"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chip33a"
+                            android:text="@string/cb33_d"/>
 
-                    <CheckBox
-                        android:id="@+id/cb33_f"
-                        style="@style/cBstyle"
-                        android:layout_width="140sp"
-                        android:layout_height="40sp"
-                        android:layout_below="@id/cb33_a"
-                        android:layout_toEndOf="@id/cb33_e"
-                        android:text="@string/cb29_f" />
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip33e"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chip33a"
+                            android:layout_toEndOf="@id/chip33d"
+                            android:text="@string/cb33_e" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip33f"
+                            style="@style/CustomChipChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chip33b"
+                            android:layout_toEndOf="@id/chip33e"
+                            android:text="@string/cb33_f" />
+
+                    </com.google.android.material.chip.ChipGroup>
 
                 </RelativeLayout>
 
