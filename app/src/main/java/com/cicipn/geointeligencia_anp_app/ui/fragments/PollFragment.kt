@@ -56,14 +56,13 @@ class PollFragment: Fragment(R.layout.fragment_poll){
 
         //Botón Sección Servicios
         btnSeccionServicios.setOnClickListener{
-            Toast.makeText(context, "¡Sección en construcción!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(context, "¡Sección en construcción!", Toast.LENGTH_SHORT).show()
             val intent = Intent(activity, Sec2::class.java)
             startActivity(intent)
         }
 
         //Botón Sección Regrese pronto
         btnSeccionRegresa.setOnClickListener{
-            //Toast.makeText(context, "¡Sección en construcción!", Toast.LENGTH_SHORT).show()
             val intent = Intent(activity, Sec3::class.java)
             startActivity(intent)
         }
@@ -77,11 +76,14 @@ class PollFragment: Fragment(R.layout.fragment_poll){
             val isSec1Answered = sharedPref.getBoolean(Constants.KEY_SEND1,false)
             //Ya que estén implementadas las secciones 2 y 3, descomentar las siguientes dos líneas
             //val isSec2Answered = sharedPref.getBoolean(Constants.KEY_SEND2,false)
-            //val isSecAnswered = sharedPref.getBoolean(Constants.KEY_SEND2,false)
+            val isSec3Answered = sharedPref.getBoolean(Constants.KEY_SEND3,false)
 
-            if (isConnected && isSec1Answered){
+            if (isConnected && isSec1Answered && isSec3Answered){
                 val data = StringBuilder()
-                data.append("ID,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10\n")
+                data.append("ID,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14a,Q14b,Q14c,Q14d,Q14e,Q14f," +
+                        "Q14g,Q14h,Q15a,Q15b,Q15c,Q15d,Q15e,Q15f,Q15g,Q15h,Q16,Q17,Q18,Q19,Q20,Q21," +
+                        "Q22,Q23,Q24,Q25,Q26,Q27,Q28,Q29," +
+                        "Q30,Q31,Q32,Q33,Q34a,Q34b,Q34c,Q34d,Q35,Q36,Q37\n")
                 val admin = AdminSQLiteOpenHelper(requireActivity(),"Encuesta",null,1)
                 val db = admin.readableDatabase
                 val result = db.rawQuery("SELECT * FROM RESPUESTAS",null)
@@ -115,7 +117,7 @@ class PollFragment: Fragment(R.layout.fragment_poll){
                 }
             }
 
-            else if (isConnected && !isSec1Answered) Toast.makeText(context,"Conteste primero la encuesta",Toast.LENGTH_SHORT).show()
+            else if (isConnected && (!isSec1Answered || !isSec3Answered)) Toast.makeText(context,"Conteste primero la encuesta",Toast.LENGTH_SHORT).show()
             else Toast.makeText(context,"Sin conexión. Intente más tarde.",Toast.LENGTH_SHORT).show()
 
         }

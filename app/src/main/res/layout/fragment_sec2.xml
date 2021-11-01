@@ -53,7 +53,7 @@
                 android:id="@+id/rg_q11"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/nueve">
+                android:contentDescription="11">
 
                 <RadioButton
                     android:id="@+id/rb11_1"
@@ -99,7 +99,7 @@
                 android:id="@+id/rg_q12"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/nueve">
+                android:contentDescription="12">
 
                 <RadioButton
                     android:id="@+id/rb12_1"
@@ -139,7 +139,7 @@
                 android:id="@+id/cg13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/cuatro">
+                android:contentDescription="13">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/cp13_1"
@@ -242,6 +242,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="14a"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -291,6 +292,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="14b"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -340,6 +342,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="14c"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -389,6 +392,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="14d"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -438,6 +442,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="14e"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -487,6 +492,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="14f"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -536,6 +542,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="14g"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -585,6 +592,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="14h"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -645,6 +653,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/letra"
+                android:contentDescription="15a"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -714,6 +723,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="15b"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -783,6 +793,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="15c"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -852,6 +863,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="15d"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -921,6 +933,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="15e"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -990,6 +1003,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="15f"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -1059,6 +1073,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="15g"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -1128,6 +1143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/letra"
+                android:contentDescription="15h"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -1187,13 +1203,13 @@
                 android:id="@+id/q16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/q11" />
+                android:text="@string/q16" />
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/cg16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/cuatro">
+                android:contentDescription="16">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/cp16_1"
@@ -1239,7 +1255,7 @@
                 android:id="@+id/rg_q17"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/nueve">
+                android:contentDescription="17">
 
                 <RadioButton
                     android:id="@+id/rb17_1"
@@ -1286,7 +1302,7 @@
                 android:id="@+id/rg_q18"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/nueve">
+                android:contentDescription="18">
 
                 <RadioButton
                     android:id="@+id/rb18_1"
@@ -1332,7 +1348,7 @@
                 android:id="@+id/rg_q19"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/nueve">
+                android:contentDescription="19">
 
                 <RadioButton
                     android:id="@+id/rb19_1"

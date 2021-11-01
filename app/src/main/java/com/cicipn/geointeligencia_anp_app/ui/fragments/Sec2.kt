@@ -10,12 +10,17 @@ import com.cicipn.geointeligencia_anp_app.R
 import com.cicipn.geointeligencia_anp_app.other.Constants
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
+import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_NAME
+import com.cicipn.geointeligencia_anp_app.other.Constants.KEY_SEND2
+import dagger.hilt.android.AndroidEntryPoint
 import java.lang.Exception
+import javax.inject.Inject
 import kotlin.math.log
 
+@AndroidEntryPoint
 class Sec2 : AppCompatActivity() {
-//    lateinit var sharedPref: SharedPreferences
-    lateinit var q3_lugar : Spinner //Spinner para los lugares de procedencia
+    @Inject
+    lateinit var sharedPref: SharedPreferences
     lateinit var enviarSec2 : Button // Boton que extrae respuestas
     lateinit var idsRG : Array<Int> // Arreglo donde se guardaran los ids e los radiogroups
     lateinit var idsCG : Array<Int> // Arreglo donde se guardan los ids de los chips
@@ -34,48 +39,46 @@ class Sec2 : AppCompatActivity() {
         enviarSec2 = findViewById(R.id.enviarSec2) as Button // Declaracion Button enviarSec1
 
         enviarSec2.setOnClickListener {
-            //val enviado = sharedPref.getBoolean(Constants.KEY_SEND1,false)
+            val enviado = sharedPref.getBoolean(Constants.KEY_SEND2,false)
             var mensaje = ""
             val admin = AdminSQLiteOpenHelper(this,"Encuesta",null,1)
             val bd = admin.writableDatabase
             val values = ContentValues()
            // values.put("ID",sharedPref.getString(Constants.KEY_NAME, "."))
 
-            Log.d("AYUDA", "aqui llego");
+            //Log.d("AYUDA", "aqui llego");
             // Obtengo respuesta de todos los rg
             try {
-             //   if (!enviado) {
+                if (!enviado) {
                     for (i in idsRG) {
-                        var respuesta = respuestaRadioButton(i) as Array<CharSequence>
+                        var respuesta = respuestaRadioButton(i)
                         values.put("Q"+respuesta.get(0),respuesta.get(1).toString())
                         //mensaje += "\nPregunta: " + respuesta.get(0) + " respuesta seleccionada: " + respuesta.get(
                         //   1
                         //)
                     }
                     //mensaje += "Pregunta: 3 respuesta: " + q3_lugar.selectedItem // El item seleccionado en el spin
-                    values.put("Q3",q3_lugar.selectedItem.toString())
                     for (i in idsCG) {
-                        var respuesta = respuestaChip(i) as Array<CharSequence>
+                        var respuesta = respuestaChip(i)
                         values.put("Q"+respuesta.get(0),respuesta.get(1).toString())
                         //mensaje += "\nPregunta: " + respuesta.get(0) + " respuestas seleccionadas: " + respuesta.get(
                         //       1)
                     }
                     mensaje = "Tus respuestas han sido guardadas."
-                    //sharedPref.edit()
-                       // .putBoolean(Constants.KEY_SEND1,true)
-                        //.apply()
+                    sharedPref.edit()
+                        .putBoolean(Constants.KEY_SEND2,true)
+                        .apply()
 
                     //Global.setGlobal(enviado)
-                //}
-               // else
-                  //  mensaje = "¡Ya has enviado tus respuestas! Gracias :)"
+                }
+                else mensaje = "¡Ya has enviado tus respuestas! Gracias :)"
             }catch (e: Exception){
                 mensaje = "¡No olvides llenar todos los campos!"
             }
             //Imprimo en toast el mensaje
-
-         //   bd.insert("RESPUESTAS",null,values)
-           // bd.close()
+            bd.update("RESPUESTAS",values,"ID = ?", arrayOf(sharedPref.getString(Constants.KEY_NAME, ".")))
+            //bd.delete("RESPUESTAS","Q1 = ?", arrayOf(null)) //Borra la fila con los registros duplicados
+            bd.close()
             Toast.makeText(baseContext, mensaje, Toast.LENGTH_SHORT).show();
 
         }
